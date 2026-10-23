@@ -40,14 +40,12 @@ const bebidasFrias = [
 
 const filtrados = bebidasFrias.filter(p => p.tamano == "Mediano");
 const total = bebidasFrias.filter(p => p.tamano == "Grande").reduce((total, p) => total + p.precio, 0);
+const promedio = (total / bebidasFrias.filter(p => p.tamano == "Grande").length);
+const ordenados = [...bebidasFrias].sort((a, b) => a.precio - b.precio)
 
-/*
-const total = ;
-const promedio = ;
-const ordenados = ;
 
-console.log({ filtrados, total, promedio, ordenados });
-*/
 
-console.log(filtrados);
-console.log("Suma total de precio de todas las bebidas grandes: " + total);
+console.log("Lista de objectos filtrados:", filtrados);
+console.log("Suma total de precio de todas las bebidas grandes: ", total);
+console.log("Promedio: ", promedio);
+console.log("Ordenados: ", ordenados);
